@@ -1,0 +1,16 @@
+0,"('carpenter', 'craftsman', 'peasant')","('carpenter', 'pillar', 'peasant')",0.3775952458381653,0.1591227725148201
+1,"('mother', 'daughter', 'sister')","('mother', 'gun', 'sister')",0.7994810938835144,-0.07079345360398293
+2,"('worker', 'tenant', 'foreman')","('worker', 'bucket', 'foreman')",0.3856556713581085,0.2075141966342926
+3,"('trader', 'businessman', 'professor')","('trader', 'computer', 'professor')",0.6327996253967285,0.10946825612336397
+4,"('painter', 'musician', 'father')","('painter', 'hut', 'father')",0.41863787174224854,0.23997213691473007
+5,"('saxophonist', 'trumpeter', 'conductor')","('saxophonist', 'baton', 'conductor')",0.7246385216712952,0.3380369693040848
+6,"('pharmacist', 'optician', 'stranger')","('pharmacist', 'button', 'stranger')",0.24539627134799957,0.15089428424835205
+7,"('cleaner', 'janitor', 'doctor')","('cleaner', 'ball', 'doctor')",0.29953597486019135,0.20201319456100464
+8,"('dancer', 'singer', 'bystander')","('dancer', 'shoe', 'bystander')",0.5439945757389069,0.4297679662704468
+9,"('artist', 'sportsman', 'guard')","('artist', 'computer', 'guard')",0.28313154727220535,0.02297118306159973
+10,"('clerk', 'bureaucrat', 'visitor')","('clerk', 'cane', 'visitor')",0.2776767946779728,0.05595061741769314
+11,"('son', 'father', 'teacher')","('son', 'loudspeaker', 'teacher')",0.7012829780578613,-0.01760537177324295
+12,"('conductor', 'choirmaster', 'worker')","('conductor', 'sponge', 'worker')",0.2868134304881096,0.32752394676208496
+13,"('defence', 'prosecutor', 'spy')","('defence', 'knife', 'spy')",0.4631287157535553,0.10773974284529686
+14,"('cousin', 'brother', 'peasant')","('cousin', 'diamond', 'peasant')",0.5013110116124153,-0.04115774156525731
+15,"('painter', 'musician', 'friend')","('painter', 'film', 'friend')",0.5390598773956299,0.2102825716137886

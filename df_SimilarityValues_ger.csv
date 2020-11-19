@@ -1,0 +1,12 @@
+0,"('Anwalt', 'Zeuge', 'Spion')","('Anwalt', 'Saebel', 'Spion')",0.49012118577957153,0.2171412706375122
+1,"('Beamte', 'Buerokrat', 'Besucher')","('Beamte', 'Tisch', 'Besucher')",0.19958006590604782,0.243456169962883
+2,"('Braeutigam', 'Schwiegervater', 'Musiker')","('Braeutigam', 'Bilderrahmen', 'Musiker')",0.41341590881347656,0.3105124682188034
+3,"('Bruder', 'Cousin', 'Bauer')","('Bruder', 'Schmuck', 'Bauer')",0.6251795887947083,0.2181152179837227
+4,"('Zauberer', 'Akrobat', 'Zuschauer')","('Zauberer', 'Hut', 'Zuschauer')",0.45636898279190063,0.3083859086036682
+5,"('Einbrecher', 'Dieb', 'Mann')","('Einbrecher', 'Stein', 'Mann')",0.7213952839374542,0.32145528495311737
+6,"('Neurotiker', 'Exzentriker', 'Psychiater')","('Neurotiker', 'Dolch', 'Psychiater')",0.4490834027528763,0.2268371880054474
+7,"('Arbeiter', 'Monteur', 'Vorarbeiter')","('Arbeiter', 'Eimer', 'Vorarbeiter')",0.6015466451644897,0.3790013790130615
+8,"('Banker', 'Kreditgeber', 'Kunde')","('Banker', 'Geldautomat', 'Kunde')",0.5395734012126923,0.43544918298721313
+9,"('Pianist', 'Cellist', 'Hausmeister')","('Pianist', 'Ball', 'Hausmeister')",0.5786318778991699,0.25438006967306137
+10,"('Anwohner', 'Wanderer', 'Pfoertner')","('Anwohner', 'Stuhl', 'Pfoertner')",0.33071720600128174,0.33507367968559265
+11,"('Taenzer', 'Artist', 'Zuschauer')","('Taenzer', 'Schuh', 'Zuschauer')",0.37727612257003784,0.3168330788612366
