@@ -1,0 +1,93 @@
+---
+title: "Analysis eye-tracking 4"
+output: html_document
+---
+
+```{r pressure, echo=FALSE}
+library(lme4)
+
+# Load the data file
+
+data <- read.table('Final_DataFrame_ger4.csv', sep=',')
+head(data)
+
+# rename the columns of the data frame
+colnames(data) <- c("Ignore","subject","item","level","grammaticality","LogRT","centered_similarity")
+head(data)
+
+data$grammaticality<-as.factor(data$grammaticality)
+levels(data$grammaticality)
+
+xtabs(~subject+grammaticality,data)
+
+#varying intercept model
+m0 <- lmer(LogRT~1+(1|subject)+ (1|item),data)
+summary(m0)
+
+#varying intercept and slopes model (withoug correlation) for the factor of grammaticality
+m1 <- lmer(LogRT~1+grammaticality + (1|subject)+(1|item), data)
+summary(m1)
+
+m2 <- lmer(LogRT~1+centered_similarity+(1|subject)+(1|item), data)
+m2
+
+#maximal varying intercepts and varying slopes model with correlation
+
+m3 <- lmer(LogRT~1+grammaticality+centered_similarity+(1|subject)+(1|item), data)
+summary(m3)
+
+m4 <- lmer(LogRT~1+grammaticality*centered_similarity+(1|subject)+(1|item), data)
+summary(m4)
+
+anova(m0, m2)
+anova(m0, m1, m3, m4) #m1 is the best
+
+library(effects)
+
+library(car)
+
+library(ggplot2)
+
+
+effects <- as.data.frame(Effect(c("centered_similarity", "grammaticality"), m3))
+
+ggplot(effects,aes(x=centered_similarity, y=fit, ymin=lower, ymax=upper)) +
+  geom_point(aes(colour=grammaticality), size=5) +
+  geom_errorbar(aes(colour=grammaticality, width=0.25)) +
+  theme_light(base_size = 15) +
+  ggtitle("Interaction plot") +
+  ylab("RT in milliseconds") +
+  xlab("centered similarity") +
+  scale_color_discrete(name ="Grammaticality",
+                       breaks=c("-1", "1"),
+                       labels=c("Ungrammatical", "Grammatical")) +
+  scale_y_continuous(breaks=log(seq(150,665,50)),labels= seq(150,665,50))
+
+exp(5.0)
+exp(6.5)
+
+
+hist(residuals(m0)) # normally distributed
+acf(residuals(m0))
+
+hist(residuals(m1)) # normally distributed
+acf(residuals(m1))
+
+hist(residuals(m2)) # normally distributed
+acf(residuals(m2))
+
+hist(residuals(m3)) # normally distributed
+acf(residuals(m3))
+
+# 95-% confidence interval = mean +/- 2*SE
+
+confint(m0)
+
+```
+
+## R Markdown
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
